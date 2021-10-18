@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 18:36:57 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/16 18:13:59 by hbecki           ###   ########.fr       */
+/*   Created: 2021/10/12 15:14:28 by hbecki            #+#    #+#             */
+/*   Updated: 2021/10/16 18:26:31 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char		*tmp;
-	size_t		i;
+	t_list	*tmp_list;
 
-	i = 0;
-	tmp = s;
-	while (i < n)
+	tmp_list = lst;
+	while (tmp_list != NULL)
 	{
-		tmp[i] = '\0';
-		i++;
+		(*f)(tmp_list->content);
+		tmp_list = tmp_list->next;
 	}
 }

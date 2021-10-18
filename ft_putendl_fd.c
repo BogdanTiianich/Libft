@@ -6,11 +6,12 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 19:37:28 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/10 19:53:01 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/16 18:27:03 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	int		i;

@@ -6,11 +6,12 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 19:27:50 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/06 19:36:09 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/18 17:42:21 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*pointer;
@@ -18,10 +19,10 @@ char	*ft_strrchr(const char *s, int c)
 	int		j;
 
 	buf = (char *)s;
-	j = ft_strlen(buf) + 1;
+	j = ft_strlen(buf);
 	while (j >= 0)
 	{
-		if (buf[j] == c)
+		if (buf[j] == (char)c)
 		{
 			pointer = &buf[j];
 			return (pointer);

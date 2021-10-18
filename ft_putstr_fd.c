@@ -6,11 +6,12 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 20:07:16 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/10 20:08:16 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/16 18:27:11 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_putstr_fd(char *s, int fd)
 {
 	int		i;

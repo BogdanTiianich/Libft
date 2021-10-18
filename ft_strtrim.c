@@ -6,11 +6,12 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 11:33:33 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/11 18:19:51 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/16 18:30:15 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_strtrim_helper(char const *s1, char const *set)
 {
 	int		i;
@@ -71,23 +72,27 @@ int	ft_strtrim_helper_rev(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*pointer;
-	int		i;
-	int		symbols_beginning;
-	int		symbols_at_end;
+	char			*pointer;
+	unsigned int	q;
+	unsigned int	i;
+	unsigned int	symbols_beginning;
+	unsigned int	symbols_at_end;
 
 	symbols_beginning = ft_strtrim_helper(s1, set);
-	symbols_at_end = ft_strtrim_helper(s1, set);
-	pointer = (char *)malloc(ft_strlen((char *)s1 - symbols_beginning \
-	- symbols_at_end + 1) * sizeof(char));
-	i = symbols_beginning;
+	symbols_at_end = ft_strtrim_helper_rev(s1, set);
+	q = 1;
+	if (symbols_beginning + symbols_at_end >= ft_strlen((char *)s1))
+		q = 0;
+	pointer = (char *)malloc(((ft_strlen((char *)s1) - symbols_beginning \
+	- symbols_at_end) * q + 1) * sizeof(char));
 	if (pointer == NULL)
 		return (NULL);
-	while (i < ft_strlen((char *)s1) - ft_strtrim_helper_rev(s1, set))
+	i = symbols_beginning * q;
+	while (i < (ft_strlen((char *)s1) - ft_strtrim_helper_rev(s1, set)) * q)
 	{
 		pointer[i - symbols_beginning] = s1[i];
 		i++;
 	}
-	pointer[i - symbols_beginning] = '\0';
+	pointer[i - symbols_beginning * q] = '\0';
 	return (pointer);
 }

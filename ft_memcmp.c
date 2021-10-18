@@ -6,14 +6,15 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 17:43:17 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/09 19:30:30 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/16 18:26:48 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*pointer_s1;
 	unsigned char	*pointer_s2;
 

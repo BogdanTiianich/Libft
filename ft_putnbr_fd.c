@@ -6,11 +6,12 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 20:09:32 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/10 20:25:59 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/16 18:27:06 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void static	ft_putnbr_fd_helper(int n, int i, int fd)
 {
 	char	c;

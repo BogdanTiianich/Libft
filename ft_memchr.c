@@ -6,11 +6,12 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 16:41:18 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/08 17:30:51 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/16 18:26:45 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
