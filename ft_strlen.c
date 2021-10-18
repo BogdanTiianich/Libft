@@ -6,11 +6,11 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 19:49:16 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/06 12:10:31 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/16 18:29:59 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *s)
+unsigned int	ft_strlen(const char *s)
 {
 	int	i;
 

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 18:36:57 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/16 18:13:59 by hbecki           ###   ########.fr       */
+/*   Created: 2021/10/11 17:53:59 by hbecki            #+#    #+#             */
+/*   Updated: 2021/10/16 18:26:39 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	char		*tmp;
-	size_t		i;
+	t_list	*new;
 
-	i = 0;
-	tmp = s;
-	while (i < n)
-	{
-		tmp[i] = '\0';
-		i++;
-	}
+	new = (t_list *)malloc(sizeof(t_list));
+	if (new == NULL)
+		return (NULL);
+	new->next = NULL;
+	new->content = content;
+	return (new);
 }

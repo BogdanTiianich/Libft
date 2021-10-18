@@ -6,11 +6,12 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 13:19:02 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/12 21:17:33 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/16 18:27:14 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void static	ft_clear(char ***arr_str, int i)
 {
 	while (i > 0)
@@ -18,7 +19,6 @@ void static	ft_clear(char ***arr_str, int i)
 		i--;
 		free(*arr_str[i]);
 	}
-	free(*arr_str);
 }
 
 int	static	num_of_strings(char const *s, char c, int *start)
@@ -29,6 +29,8 @@ int	static	num_of_strings(char const *s, char c, int *start)
 
 	i = 0;
 	num_of_strings = 0;
+	if (ft_strlen((char *)s) == 0)
+		return (0);
 	*start = 0;
 	k = 0;
 	while (s[i] != '\0')

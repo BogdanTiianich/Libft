@@ -6,11 +6,12 @@
 /*   By: hbecki <hbecki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:19:34 by hbecki            #+#    #+#             */
-/*   Updated: 2021/10/06 13:13:33 by hbecki           ###   ########.fr       */
+/*   Updated: 2021/10/16 18:26:58 by hbecki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_memset(void *b, int c, size_t len)
 {
 	char		*tmp;
